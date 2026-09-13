@@ -1,0 +1,774 @@
+/* ============================================================
+   PESO PRINT — Fusion CAD & Mobile App Showcase
+   Color Palette: National University Navy (#002060, #1e3a8a) & Gold (#eab308, #ca8a04)
+   Font: Manrope
+   ============================================================ */
+
+:root {
+  --nu-navy: #002060;
+  --nu-navy-dark: #001540;
+  --nu-navy-light: #1e3a8a;
+  --nu-gold: #f59e0b;
+  --nu-gold-light: #fbbf24;
+  --nu-gold-dark: #b45309;
+
+  --bg-primary: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-card: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --border-light: #e2e8f0;
+  --border-medium: #d1d5db;
+  --border-dark: #9ca3af;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px -6px rgba(0, 32, 96, 0.12);
+  --shadow-xl: 0 24px 48px -12px rgba(0, 32, 96, 0.18);
+
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --max-width: 1480px;
+  --poster-width: 1400px;
+}
+
+/* ---------------- RESET & BASE ---------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: #f1f5f9;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f1f5f9;
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ---------------- THE WEBSITE CONTAINER ---------------- */
+.site-wrapper {
+  max-width: 1560px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: url('assets/vecs/background.svg');
+  background-repeat: repeat;
+  background-position: top center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------------- SITE HEADER ---------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Home Navigation Button */
+.nav-btn.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-medium);
+  background: #ffffff;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-btn.home-btn:hover {
+  border-color: var(--nu-navy);
+  color: var(--nu-navy);
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+/* Centered Title */
+.site-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.p-accent {
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* Right Navigation Links */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+}
+
+.nav-link:hover {
+  color: var(--nu-navy);
+  background: var(--bg-subtle);
+}
+
+/* ---------------- MAIN SECTIONS ---------------- */
+main {
+  flex: 1;
+}
+
+.section-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 48px;
+}
+
+/* ---------------- CAD DRAWING SECTION ---------------- */
+.cad-section {
+  background: transparent;
+  border: none;
+  padding: 16px 0 24px;
+}
+
+.cad-viewer-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cad-viewer-wrapper:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-xl);
+}
+
+.cad-iframe-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: #f8fafc;
+}
+
+.cad-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ---------------- SHOWCASE SECTION (PURE IMAGES POSTER) ---------------- */
+.showcase-section {
+  background: transparent;
+  padding: 48px 0 64px;
+  border: none;
+}
+
+.showcase-header {
+  margin-bottom: 32px;
+}
+
+.showcase-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Poster Wrapper (Clean White, No Grid Lines) */
+.poster-board-wrapper {
+  max-width: var(--poster-width);
+  margin: 0 auto;
+}
+
+.poster-board {
+  position: relative;
+  background: #ffffff;
+  padding: 0;
+}
+
+/* ---------------- POSTER TILES (PURE IMAGES & HOVER) ---------------- */
+.poster-tile {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.poster-tile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover: Scale up smoothly, elevate, and cast soft shadow */
+.poster-tile:hover {
+  transform: scale(1.025) translateY(-4px);
+  z-index: 20;
+  box-shadow: 0 20px 38px -10px rgba(15, 23, 42, 0.22);
+  border-color: #64748b;
+}
+
+.poster-tile:hover img {
+  transform: scale(1.015);
+}
+
+/* ---------------- POSTER ROW 1: DETAIL QUARTET ---------------- */
+.poster-row-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr 1fr;
+  gap: 14px;
+  height: 230px;
+  margin-bottom: 14px;
+}
+
+.tile-dispenser img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.tile-back-panel img {
+  object-fit: cover;
+  object-position: 50% center;
+}
+
+.tile-partnership {
+  background: #0d193a;
+}
+
+.tile-partnership img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.tile-console img {
+  object-fit: cover;
+  object-position: 50% 32%;
+}
+
+/* ---------------- POSTER ROW 2: HERO & TOP DECK ---------------- */
+.poster-row-middle {
+  display: grid;
+  grid-template-columns: 1.62fr 1fr;
+  gap: 14px;
+  height: 550px;
+  margin-bottom: 14px;
+}
+
+.tile-hero-iso img {
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+.tile-top-deck img {
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+/* ---------------- POSTER ROW 3: INTERNAL ARCHITECTURE & SUBSYSTEMS ---------------- */
+.poster-row-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.48fr;
+  gap: 14px;
+  height: 560px;
+}
+
+.tile-cutaway-main {
+  height: 100%;
+}
+
+.tile-cutaway-main img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.poster-cluster-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.cluster-subrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  height: 295px;
+}
+
+.tile-maintenance-bay img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.tile-front-elevation img {
+  object-fit: cover;
+  object-position: 50% center;
+}
+
+.tile-sensor-closeup {
+  flex: 1;
+  min-height: 250px;
+}
+
+.tile-sensor-closeup img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------------- WEB APPLICATION SECTION ---------------- */
+.webapp-section,
+.mobile-section {
+  background: transparent;
+  padding: 48px 0 80px;
+  border: none;
+}
+
+.webapp-header,
+.mobile-header {
+  margin-bottom: 32px;
+}
+
+.webapp-title,
+.mobile-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Web Application Images Grid */
+.webapp-images-grid,
+.mobile-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* Each Web App Image Card with Small and Subtle Gray Border */
+.webapp-tile,
+.mobile-tile {
+  position: relative;
+  aspect-ratio: 9 / 19.5;
+  background: #ffffff;
+  border: 1px solid var(--border-medium); /* small & subtle gray */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease;
+}
+
+.webapp-tile img,
+.mobile-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* Web App Image Hover Animation */
+.webapp-tile:hover,
+.mobile-tile:hover {
+  transform: scale(1.03) translateY(-4px);
+  z-index: 15;
+  box-shadow: 0 18px 36px -8px rgba(15, 23, 42, 0.2);
+  border-color: #9ca3af;
+}
+
+.webapp-tile:hover img,
+.mobile-tile:hover img {
+  transform: scale(1.02);
+}
+
+/* [+ many more] Card at the end of Web Application */
+.webapp-tile.webapp-tile-more,
+.mobile-tile.mobile-tile-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  cursor: default;
+}
+
+.webapp-tile.webapp-tile-more:hover,
+.mobile-tile.mobile-tile-more:hover {
+  transform: scale(1.02) translateY(-3px);
+  border-color: #94a3b8;
+  background: #f1f5f9;
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.1);
+}
+
+.more-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+/* ---------------- SECTION SCROLL ANIMATIONS ---------------- */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------- LIGHTBOX MODAL (PURE IMAGE + X BUTTON) ---------------- */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 10;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-img {
+  max-width: 88vw;
+  max-height: 84vh;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Clean X Close Button */
+.lightbox-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.08);
+}
+
+/* ---------------- SITE FOOTER ---------------- */
+.site-footer {
+  background: transparent;
+  border: none;
+  padding: 32px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-logo {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.footer-back-top {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--nu-navy);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  transition: all 0.18s ease;
+}
+
+.footer-back-top:hover {
+  border-color: var(--nu-navy);
+  transform: translateY(-1px);
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+@media (max-width: 1560px) {
+  .site-wrapper {
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  .poster-row-top {
+    height: 160px;
+  }
+  .poster-row-middle {
+    height: 400px;
+  }
+  .poster-row-bottom {
+    height: 400px;
+  }
+  .cluster-subrow {
+    height: 210px;
+  }
+}
+
+@media (max-width: 820px) {
+  .section-container {
+    padding: 32px 20px;
+  }
+  .header-container {
+    padding: 0 20px;
+  }
+  .footer-container {
+    padding: 0 20px;
+  }
+  .header-nav {
+    display: none;
+  }
+  .poster-row-top {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    gap: 10px;
+  }
+  .poster-row-top .poster-tile {
+    height: 140px;
+  }
+  .poster-row-middle {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 10px;
+  }
+  .poster-row-middle .poster-tile {
+    height: 320px;
+  }
+  .poster-row-bottom {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 10px;
+  }
+  .poster-row-bottom .poster-tile {
+    height: 300px;
+  }
+  .cluster-subrow {
+    height: 180px;
+  }
+  .webapp-images-grid,
+  .mobile-images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+  }
+  .lightbox-close {
+    top: -46px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section-container {
+    padding: 20px 10px; /* maximum width utilization on mobile */
+  }
+  .header-container {
+    padding: 0 12px;
+    height: 60px;
+  }
+  .footer-container {
+    padding: 0 12px;
+  }
+  .cad-section {
+    padding: 10px 0 16px;
+  }
+  .showcase-section {
+    padding: 24px 0 32px;
+  }
+  .webapp-section {
+    padding: 24px 0 40px;
+  }
+  .showcase-header,
+  .webapp-header {
+    margin-bottom: 16px;
+  }
+  .cad-iframe-container {
+    height: 440px;
+  }
+  .cad-viewer-wrapper {
+    border-radius: 10px;
+  }
+  .poster-row-top {
+    gap: 8px;
+  }
+  .poster-row-top .poster-tile {
+    height: 120px;
+    border-radius: 4px;
+  }
+  .poster-row-middle {
+    gap: 8px;
+  }
+  .poster-row-middle .poster-tile {
+    height: 270px;
+    border-radius: 4px;
+  }
+  .poster-row-bottom {
+    gap: 8px;
+  }
+  .poster-row-bottom .poster-tile {
+    height: 270px;
+    border-radius: 4px;
+  }
+  .cluster-subrow {
+    gap: 8px;
+    height: 150px;
+  }
+  .tile-sensor-closeup {
+    min-height: 112px;
+    height: 112px;
+  }
+  .webapp-images-grid,
+  .mobile-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .webapp-tile,
+  .mobile-tile {
+    border-radius: 8px;
+  }
+}

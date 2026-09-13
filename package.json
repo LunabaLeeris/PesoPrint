@@ -1,0 +1,11 @@
+{
+  "name": "pesoprint",
+  "version": "1.0.0",
+  "description": "PesoPrint — Automated student printing kiosk CAD & Web App showcase",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

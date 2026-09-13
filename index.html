@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PesoPrint" />
+  <title>PESO PRINT</title>
+
+  <!-- Google Font: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ==================== SITE CONTAINER ==================== -->
+  <div class="site-wrapper">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" id="top">
+    <div class="header-container">
+      <button class="nav-btn home-btn" id="homeBtn" aria-label="Go to top">
+        <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+      </button>
+
+      <h1 class="site-title">PESO PRINT</h1>
+
+      <nav class="header-nav" aria-label="Section navigation">
+        <a href="#cadSection" class="nav-link">3D CAD</a>
+        <a href="#showcaseSection" class="nav-link">Showcase</a>
+        <a href="#webappSection" class="nav-link">Web App</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+
+    <!-- ==================== CAD DRAWING SECTION ==================== -->
+    <section class="cad-section section-reveal" id="cadSection">
+      <div class="section-container">
+        <!-- CAD Viewer Iframe Container -->
+        <div class="cad-viewer-wrapper">
+          <div class="cad-iframe-container">
+            <iframe class="cad-iframe" id="cadIframe"
+              src="https://students130386.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b2495b62b417c25d8" width="100%"
+              height="100%" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true"
+              mozallowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SHOWCASE POSTER GALLERY ==================== -->
+    <section class="showcase-section section-reveal" id="showcaseSection">
+      <div class="section-container">
+
+        <div class="showcase-header">
+          <h2 class="showcase-title">PROTOTYPE &amp; DOCUMENTATION</h2>
+        </div>
+
+        <!-- PURE IMAGES POSTER COMPOSITION (NO GRID BACKGROUND) -->
+        <div class="poster-board-wrapper">
+          <div class="poster-board">
+
+            <!-- POSTER ROW 1: DETAIL QUARTET -->
+            <div class="poster-row-top">
+              <div class="poster-tile tile-dispenser" data-lightbox-src="assets/kiosk_base.png" title="Dispenser Tray">
+                <img src="assets/kiosk_base.png" alt="PesoPrint Dispenser Slot" loading="lazy" />
+              </div>
+
+              <div class="poster-tile tile-back-panel" data-lightbox-src="assets/kiosk_back.png" title="Rear Enclosure">
+                <img src="assets/kiosk_back.png" alt="PesoPrint Rear Ventilation" loading="lazy" />
+              </div>
+
+              <div class="poster-tile tile-partnership" data-lightbox-src="assets/kiosk_partnerhip.png"
+                title="National University Partnership">
+                <img src="assets/kiosk_partnerhip.png" alt="National University Partnership Banner" loading="lazy" />
+              </div>
+
+              <div class="poster-tile tile-console" data-lightbox-src="assets/kiosk_front_zooned.png"
+                title="Front Console">
+                <img src="assets/kiosk_front_zooned.png" alt="PesoPrint Screen & Coin Slot Interface" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- POSTER ROW 2: HERO ISOMETRIC & TOP DECK -->
+            <div class="poster-row-middle">
+              <div class="poster-tile tile-hero-iso" data-lightbox-src="assets/kiosk_side.png"
+                title="Hero Isometric Prototype">
+                <img src="assets/kiosk_side.png" alt="PesoPrint 3D Isometric View" loading="lazy" />
+              </div>
+
+              <div class="poster-tile tile-top-deck" data-lightbox-src="assets/kiosk_top.png" title="Top Elevation">
+                <img src="assets/kiosk_top.png" alt="PesoPrint Top Elevation" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- POSTER ROW 3: INTERNAL ARCHITECTURE & SUBSYSTEMS -->
+            <div class="poster-row-bottom">
+              <!-- Left: Open Cutaway Full Body -->
+              <div class="poster-tile tile-cutaway-main" data-lightbox-src="assets/kiosk_opened.png"
+                title="Internal Hardware Architecture">
+                <img src="assets/kiosk_opened.png" alt="PesoPrint Internal Component Assembly" loading="lazy" />
+              </div>
+
+              <!-- Right: Mechanism & Elevation Cluster -->
+              <div class="poster-cluster-right">
+                <div class="cluster-subrow">
+                  <div class="poster-tile tile-maintenance-bay" data-lightbox-src="assets/kiosk_opened_maintenance.png"
+                    title="Rear Service Bay">
+                    <img src="assets/kiosk_opened_maintenance.png" alt="PesoPrint Rear Maintenance Bay"
+                      loading="lazy" />
+                  </div>
+                  <div class="poster-tile tile-front-elevation" data-lightbox-src="assets/kiosk_birrds.png"
+                    title="Front Perspective">
+                    <img src="assets/kiosk_birrds.png" alt="PesoPrint Front Perspective" loading="lazy" />
+                  </div>
+                </div>
+
+                <div class="poster-tile tile-sensor-closeup" data-lightbox-src="assets/kiosk_camera_closeup.png"
+                  title="Internal Sensor & Mechanism">
+                  <img src="assets/kiosk_camera_closeup.png" alt="Internal Camera Sensor and Bracket" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== WEB APPLICATION SECTION ==================== -->
+    <section class="webapp-section section-reveal" id="webappSection">
+      <div class="section-container">
+
+        <div class="webapp-header">
+          <h2 class="webapp-title">WEB APPLICATION</h2>
+        </div>
+
+        <!-- Web Application Images Grid -->
+        <div class="webapp-images-grid" id="webappGrid">
+
+          <!-- 01. Preview Mode -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Preview mode.png"
+            title="Document Preview">
+            <img src="assets/mobile_application/Pdf Viewer _ Preview mode.png" alt="PDF Preview Mode Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 02. Organize Pages (Click) -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Organize Pages _ Click.png"
+            title="Page Grid Selection">
+            <img src="assets/mobile_application/Pdf Viewer _ Organize Pages _ Click.png"
+              alt="Organize Pages Grid Screen" loading="lazy" />
+          </div>
+
+          <!-- 03. Organize Pages (Drag & Drop) -->
+          <div class="webapp-tile"
+            data-lightbox-src="assets/mobile_application/Pdf Viewer _ Organize Pages _ Drag (long press).png"
+            title="Drag & Drop Reorder">
+            <img src="assets/mobile_application/Pdf Viewer _ Organize Pages _ Drag (long press).png"
+              alt="Drag and Drop Page Reordering" loading="lazy" />
+          </div>
+
+          <!-- 04. Cost Calculation -->
+          <div class="webapp-tile"
+            data-lightbox-src="assets/mobile_application/Pdf Viewer _ Cost Calculation loading.png"
+            title="Cost Calculation">
+            <img src="assets/mobile_application/Pdf Viewer _ Cost Calculation loading.png" alt="Cost Calculation Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 05. Coin Slot Sync -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Coin slot _ Loading.png"
+            title="Coin Slot Sync">
+            <img src="assets/mobile_application/Pdf Viewer _ Coin slot _ Loading.png" alt="Coin Slot Syncing Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 06. Payment Success -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Payment Done.png"
+            title="Payment Verified">
+            <img src="assets/mobile_application/Pdf Viewer _ Payment Done.png" alt="Payment Complete Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 07. Print Confirmation -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Print Confirmation.png"
+            title="Print Confirmation">
+            <img src="assets/mobile_application/Pdf Viewer _ Print Confirmation.png" alt="Print Job Confirmation Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 08. Live Printing -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Printing.png"
+            title="Printing in Progress">
+            <img src="assets/mobile_application/Pdf Viewer _ Printing.png" alt="Live Printing Progress Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 09. Printing Complete -->
+          <div class="webapp-tile" data-lightbox-src="assets/mobile_application/Pdf Viewer _ Printing Confirmation.png"
+            title="Print Complete">
+            <img src="assets/mobile_application/Pdf Viewer _ Printing Confirmation.png" alt="Print Complete Screen"
+              loading="lazy" />
+          </div>
+
+          <!-- 10. Reprint Reasons Prompt -->
+          <div class="webapp-tile"
+            data-lightbox-src="assets/mobile_application/Pdf Viewer _ Printing Confirmation _ Pair Selection _ Request for reprinting _ Reasons.png"
+            title="Reprint Reasons">
+            <img
+              src="assets/mobile_application/Pdf Viewer _ Printing Confirmation _ Pair Selection _ Request for reprinting _ Reasons.png"
+              alt="Reprint Reason Selection Screen" loading="lazy" />
+          </div>
+
+          <!-- 11. Reprint Accepted -->
+          <div class="webapp-tile"
+            data-lightbox-src="assets/mobile_application/Pdf Viewer _ Printing Confirmation _ Pair Selection _ Request for reprinting _ Accepted.png"
+            title="Reprint Accepted">
+            <img
+              src="assets/mobile_application/Pdf Viewer _ Printing Confirmation _ Pair Selection _ Request for reprinting _ Accepted.png"
+              alt="Reprint Request Accepted Screen" loading="lazy" />
+          </div>
+
+          <!-- 12. More Screens Card -->
+          <div class="webapp-tile webapp-tile-more">
+            <span class="more-text">+ many more</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-logo">PESO PRINT 2026</p>
+        <p class="footer-tagline"> Automated Printing Kiosk</p>
+      </div>
+      <div class="footer-right">
+        <button class="footer-back-top" id="footerBackTop">
+          <span>Back to Top ↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  </div><!-- /.site-wrapper -->
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="lightbox-img-wrap">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Showcase photograph" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Script -->
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
