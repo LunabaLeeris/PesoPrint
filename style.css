@@ -670,6 +670,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     height: auto;
     gap: 10px;
+    margin-bottom: 10px;
   }
   .poster-row-top .poster-tile {
     height: 140px;
@@ -678,6 +679,7 @@ main {
     grid-template-columns: 1fr;
     height: auto;
     gap: 10px;
+    margin-bottom: 10px;
   }
   .poster-row-middle .poster-tile {
     height: 320px;
@@ -687,11 +689,24 @@ main {
     height: auto;
     gap: 10px;
   }
-  .poster-row-bottom .poster-tile {
+  .poster-row-bottom > .poster-tile {
     height: 300px;
   }
+  .poster-cluster-right {
+    height: auto;
+    gap: 10px;
+  }
   .cluster-subrow {
+    height: auto;
+    gap: 10px;
+  }
+  .cluster-subrow .poster-tile {
     height: 180px;
+  }
+  .tile-sensor-closeup {
+    height: 200px;
+    min-height: unset;
+    flex: none;
   }
   .webapp-images-grid,
   .mobile-images-grid {
@@ -735,6 +750,7 @@ main {
   }
   .poster-row-top {
     gap: 8px;
+    margin-bottom: 8px;
   }
   .poster-row-top .poster-tile {
     height: 120px;
@@ -742,25 +758,36 @@ main {
   }
   .poster-row-middle {
     gap: 8px;
+    margin-bottom: 8px;
   }
   .poster-row-middle .poster-tile {
-    height: 270px;
+    height: 260px;
     border-radius: 4px;
   }
   .poster-row-bottom {
     gap: 8px;
   }
-  .poster-row-bottom .poster-tile {
-    height: 270px;
+  .poster-row-bottom > .poster-tile {
+    height: 260px;
     border-radius: 4px;
+  }
+  .poster-cluster-right {
+    gap: 8px;
+    height: auto;
   }
   .cluster-subrow {
     gap: 8px;
+    height: auto;
+  }
+  .cluster-subrow .poster-tile {
     height: 150px;
+    border-radius: 4px;
   }
   .tile-sensor-closeup {
-    min-height: 112px;
-    height: 112px;
+    min-height: unset;
+    height: 150px;
+    flex: none;
+    border-radius: 4px;
   }
   .webapp-images-grid,
   .mobile-images-grid {
