@@ -3,7 +3,13 @@
 // 1. Lightbox Modal (Pure image + X close button)
 // 2. Section Scroll Animations
 // 3. Smooth Navigation (Home & Back to top)
+// 4. Vercel Web Analytics Support
 // ============================================================
+
+interface Window {
+  va?: (event: string, options?: unknown) => void;
+  vaq?: unknown[];
+}
 
 class LightboxController {
   private modal: HTMLElement;
