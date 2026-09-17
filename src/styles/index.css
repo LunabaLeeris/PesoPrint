@@ -63,7 +63,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background-color: #ffffff;
-  background-image: url('assets/vecs/background.svg');
+  background-image: url('/assets/vecs/background.svg');
   background-repeat: repeat;
   background-position: top center;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
